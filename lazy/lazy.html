@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lazy懒加载</title>
+  <style>
+
+    li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .img{
+      width: 900px;
+      margin: 0 auto;
+    }
+    .img li{
+      float: left;
+      margin: 10px 10px;
+    }
+    .img li img{
+      width: 260px;
+      height: 410px;
+    }
+    P{
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <ul class="img">
+    <li><a href="#"><img src="image/1.jpg" data-src="image/1.jpg" /></a></li>
+    <li><a href="#"><img src="image/2.jpg" data-src="image/2.jpg" /></a></li>
+    <li><a href="#"><img src="image/3.jpg" data-src="image/3.jpg" /></a></li>
+    <li><a href="#"><img src="image/4.jpg" data-src="image/4.jpg" /></a></li>
+    <li><a href="#"><img src="image/5.jpg" data-src="image/5.jpg" /></a></li>
+    <li><a href="#"><img src="image/6.jpg" data-src="image/6.jpg" /></a></li>
+    <li><a href="#"><img src="image/1.jpg" data-src="image/1.jpg" /></a></li>
+    <li><a href="#"><img src="image/2.jpg" data-src="image/2.jpg" /></a></li>
+    <li><a href="#"><img src="image/3.jpg" data-src="image/3.jpg" /></a></li>
+    <li><a href="#"><img src="image/4.jpg" data-src="image/4.jpg" /></a></li>
+    <li><a href="#"><img src="image/5.jpg" data-src="image/5.jpg" /></a></li>
+    <li><a href="#"><img src="image/6.jpg" data-src="image/6.jpg" /></a></li>
+    <li><a href="#"><img src="image/1.jpg" data-src="image/1.jpg" /></a></li>
+    <li><a href="#"><img src="image/2.jpg" data-src="image/2.jpg" /></a></li>
+    <li><a href="#"><img src="image/3.jpg" data-src="image/3.jpg" /></a></li>
+    <li><a href="#"><img src="image/4.jpg" data-src="image/4.jpg" /></a></li>
+    <li><a href="#"><img src="image/5.jpg" data-src="image/5.jpg" /></a></li>
+    <li><a href="#"><img src="image/6.jpg" data-src="image/6.jpg" /></a></li>
+  </ul>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="js/lazy.js"></script>
+</body>
+</html>
