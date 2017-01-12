@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html, body{
+    height: 100%;
+  }
+    .register{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url(bg.jpg) no-repeat top center;
+      background-size: cover;
+      overflow: hidden;
+    }
+    .container{
+      width: 22%;
+      text-align: center;
+      background: rgba(72, 72, 72, .3);
+      border: 1px solid rgba(0, 0, 0, .5);
+      border-radius: 8px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 2px 4px 18px 0 rgba(0, 0, 0, .5);
+    }
+    .text{
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+      padding: 20px 0 20px 32px;
+      color: #eee;
+      box-shadow: 1px 1px 4px rgba(255, 255, 255, .3) inset;
+      border-top-left-radius: 8px; 
+      border-top-right-radius: 8px; 
+      letter-spacing: 30px;
+    }
+    .msg{
+        font-size: 10px;
+        color: #999;
+        margin-top: 8px;
+        min-height: 20px;
+    }
+    
+    .register-list{
+        box-shadow: 3px -1px 4px -2px rgba(255, 255, 255, .3) inset;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    input{
+        width: 60%;
+        border: none;
+        border-radius: 4px;
+        background: #eee;
+        height: 20px;
+        line-height: 20px;
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, .5);
+        box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, .2);
+        background: rgba(47, 47, 47, .2);
+        outline: none;
+    }
+    input:focus{
+      border: 1px solid #ccc;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    .errorInput{
+        border: 1px solid red;
+    }
+    .correctInput{
+        border: 1px solid green;
+    }
+    .btn{
+      width: 65%;
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #eee;
+      background: #4e9320;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgba(0, 0, 0, .6);
+      box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, .2);
+      box-shadow: 2px 2px 4px rgba(255, 255, 255, .3) inset;
+      background: linear-gradient(#61a038, #367110);
+    }
+    .btn:hover{
+      background: #3a800b;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="register">
+    <div class="container">
+      <h3 class="text">注册</h3>
+      <form id="register-form" class="register-list" action="">
+        <dl class="register-ct">
+            <!-- <dt>用户名:</dt> -->
+            <dd>
+                <input id="username" type="text" placeholder="用户名">
+            </dd>
+            <dd class="msg msg-un">只能是字母、数字、下划线，3-10个字符</dd>
+
+            <!-- <dt>密码:</dt> -->
+            <dd>
+                <input type="password" id="password1" placeholder="密码">
+            </dd>
+            <dd class="msg msg-pwd1">字母、数字、下划线至少两种6-15个字符</dd>
+
+            <!-- <dt> 确认密码:</dt> -->
+            <dd>
+                <input type="password" id="password2" placeholder="请再输入一次密码">
+            </dd>
+            <dd class="msg msg-pwd2"></dd>
+            <dd><button class="btn" id="btn-register">注册</button></dd>
+        </dl>
+    </form>
+    </div>
+    
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
