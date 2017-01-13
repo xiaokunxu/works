@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>懒加载+瀑布流+ajax</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .wrap{
+    width: 900px;
+    margin: 0 auto;
+  }
+  li{
+    list-style: none;
+  }
+  .clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  #ct-pic{
+    position: relative;
+  }
+  .item{
+    position: absolute;
+    padding: 0 0 10px 0;
+    width: 280px;
+    margin: 10px;
+    border: 1px solid #eee;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  .item img{
+    margin: 10px;
+    width: 260px;
+  }
+  .item h4{
+    height: 26px;
+    margin: 0 12px;
+    border-bottom: 1px solid #333;
+  }
+  .item p{
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 10px 15px 0;
+    color: #666;
+  }
+  #load{
+    /*visibility: hidden;*/
+    height: 20px;
+  }
+  .hide{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="ct">
+      <ul id="ct-pic" class="clearfix">
+        <!-- <li class="item">
+          <a href="#" class="link"><img src="http://s.img.mix.sina.com.cn/auto/resize?img=http%3A%2F%2Fwww.sinaimg.cn%2Fdy%2Fslidenews%2F5_img%2F2016_09%2F453_75615_657883.jpg&size=250_0" alt="" /></a>
+          <h4>标题</h4>
+          <p>当地时间2016年3月1日，在东部与亲俄武装作战中受伤的乌克兰士兵接受海豚治疗。</p>
+        </li> -->
+        <li class="item hide"></li>
+      </ul>
+      <div id="load">看到我就能加载</div>
+    </div>
+  </div>
+
+  <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="new.js"></script>
+</body>
+</html>

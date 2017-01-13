@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FullPage</title>
+  <style>
+    *{
+      margin: 0; 
+      padding:0;
+      box-sizing: border-box;
+    }
+    body{
+      overflow: hidden;
+    }
+    #ct1{
+      background: #1abc9c;
+    }
+    #ct2{
+      background: #e74c3c;
+    }
+    #ct3{
+      background: #3498db;
+    }
+    #ct4{
+      background: #d35400;
+    }
+    
+  </style>
+</head>
+<body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<main>
+  <section id="ct1"></section>
+  <section id="ct2"></section>
+  <section id="ct3"></section>
+  <section id="ct4"></section>
+</main>
+
+<script>
+
+  resizeSectionsAlways()
+
+  var currentPage = 1
+  var isScrolling = false
+
+  $(window).on('wheel', function(e){
+
+  if(isScrolling){
+    e.preventDefault()
+    return;
+  }
+    var dir = e.originalEvent.deltaY > 0 ? 'down': 'up'
+
+  if(currentPage === 4 && dir === 'down'){
+    return
+  }
+  if(currentPage === 1 && dir === 'up'){
+    return
+  }
+
+  var height = $(window).height()
+  isScrolling = true
+
+  // console.log(dir)
+
+  var height2 = height * (dir === 'down' ? currentPage : (currentPage-2))
+  $('body').stop().animate({
+    scrollTop: height2
+  },function(){
+    currentPage = (dir === 'down' ? currentPage + 1: currentPage - 1)
+    isScrolling = false
+  })
+  })
+
+  /*工具函数*/
+  function resizeSections(){
+  var height = $(window).height()
+  $('section').each(function(index,el){
+    var $el = $(el)
+    $el.css('height',height)
+  })
+  }
+
+  function resizeSectionsAlways(){
+  resizeSections()
+
+
+  $(window).on('resize',()=>{
+
+    resizeSections()
+  })
+  }
+</script>
+</body>
+</html>
