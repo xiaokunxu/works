@@ -276,9 +276,14 @@ header .scrolldown a:hover{
 	background-color: #333;
 }
 
+#m-nav > a.mobile-btn{
+	display: none;
+}
+
 ul#nav{
 	min-height: 48px;
 	width: auto;
+	text-align: center;
 }
 ul#nav li{
 	position: relative;
@@ -287,11 +292,12 @@ ul#nav li{
 	display: inline-block;
 }
 
+/* links */
 ul#nav li a{
 	display: inline-block;
 	padding: 6px 13px;
 	line-height: 32px;
-	text-align: left;
+	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
 	font-weight: 700;
@@ -300,9 +306,9 @@ ul#nav li a{
 ul#nav li a:active{
 	background-color: transparent !important;
 }
-ul#nav li.current a{
+/*ul#nav li.current a{
 	color: #ed5565;
-}
+}*/
 ul#nav li a:hover{
 	color: #ed5565;
 	border-bottom: 2px solid #fff;
@@ -418,6 +424,7 @@ ul#nav li a:hover{
 	background: none repeat scroll 0 0 #11abb0;
 	display: inline;
 	margin: 6px 10px 0 0;
+	letter-spacing: 2px;
 }
 #about .button:hover{
 	background: #fff;
@@ -802,7 +809,8 @@ ul#nav li a:hover{
 #what h1{
 	color: #95a3a3;
 	margin: 50px auto;
-	width: 420px;
+	text-align: center; */
+	/*width: 420px;*/
 }
 #what h1:hover{
 	border-color: #111;
@@ -919,7 +927,7 @@ ul#nav li a:hover{
     display: inline-block;
     height: auto;
     letter-spacing: 3px;
-    margin: 0 44%;
+    /*margin: 0 44%;*/
     text-transform: uppercase;
 }
 #contact .submit:hover{
@@ -960,7 +968,7 @@ ul#nav li a:hover{
 /*-----------------------------------------------------------------*/
 
 footer{
-	padding: 48px 0 48px 0;
+	padding: 48px 0 20px 0;
 	color: #303030;
 	font-size: 14px;
 	text-align: center;

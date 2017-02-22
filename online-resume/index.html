@@ -4,7 +4,7 @@
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-	<title>xuxiaokun</title>
+	<title>徐小坤的在线简历</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -14,7 +14,8 @@
     ================================================== -->
    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/basic.css">
-	 <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
    <link rel="stylesheet" href="css/animate.css">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -36,10 +37,12 @@
 
   <header id="home">
     <!-- 顶部导航栏 -->
-    <nav id="m-nav">
-      <div class="navitem clearfix">
+    <nav id="m-nav" class="clearfix">
+      <!-- <div class="navitem clearfix"> -->
+        <a class="mobile-btn" href="#m-nav" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
         <ul id="nav" class="nav">
-          <li>
+          <li class="current">
             <a class="smoothscroll" href="#home">Home</a>
           </li>
           <li>
@@ -58,7 +61,6 @@
             <a class="smoothscroll" href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
     </nav>
 
     <!-- Banner 部分 -->
@@ -172,7 +174,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/requirejs/requirejs.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/require.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>可交互页面</h5>
@@ -187,7 +189,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/static/static.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/static.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>静态页面</h5>
@@ -202,7 +204,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/jquery/jquery.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/jquery.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>事件</h5>
@@ -217,7 +219,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/form/form.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/form.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>用户注册界面</h5>
@@ -247,7 +249,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/3D-hover/3D-hover.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/3dhover.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>3D悬浮效果</h5>
@@ -262,7 +264,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/full-carousel/full-carousel.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/full-carousel.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>Carousel</h5>
@@ -277,7 +279,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/dialog/dialog.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/dialog.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>弹窗</h5>
@@ -292,7 +294,7 @@
           <div class="columns portfolio-item">
             <div class="item-wrap">
               <a href="http://xiaokunxu.com/works/date-picker/date-picker.html">
-                <img src="images/portfolio/por3.jpg" alt="">
+                <img src="images/portfolio/date-picker.jpg" alt="">
                 <div class="overlay">
                   <div class="portfolio-item-meta">
                     <h5>日历组件</h5>
@@ -369,7 +371,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Email" value="" size="35" id="contactEmail" name="contactEmail">
+                <input type="email" placeholder="Email" value="" size="35" id="contactEmail" name="contactEmail">
               </div>
 
               <div>

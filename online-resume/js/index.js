@@ -38,6 +38,12 @@ function parallax(){
     $('.banner').css('margin-top', (0 - (scrollPosition * 0.8)) + 'px');
 }
 
+$('header').css({ 'height': $(window).height() });
+$(window).on('resize', function() {
+    $('header').css({ 'height': $(window).height() });
+    $('body').css({ 'width': $(window).width() })
+});
+
 /*----------------------------------------------------*/
 /*  On scroll blur header
 /*----------------------------------------------------*/
@@ -103,7 +109,7 @@ $('.form#contactForm button.submit').on('click', function(){
 /*  wechat
 /*----------------------------------------------------*/
 (function(){
-  var $dialog = $('li.dialog');
+var $dialog = $('li.dialog');
 var $modal = $('#modal');
 var $cover = $('.cover');
 $dialog.on('click', function(){
@@ -114,7 +120,6 @@ $cover.on('click', function(){
     $modal.hide();
     $('body').removeClass('remodal');
 })
-  
 })(jQuery)
 
     
